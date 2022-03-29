@@ -15,7 +15,7 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 
 ping = ['1.1.1.1','1.0.0.1','8.8.8.8','8.8.4.4']
 
-db_frist_check = mysql.connector.connect(host="10.0.0.243",user="admin",password="1qaz2wsx",database="automation")
+db_frist_check = mysql.connector.connect(host="172.18.0.2",user="root",password="benz4466",database="automation")
 insert_3 = db_frist_check.cursor()
 
 timestr = datetime.datetime.now()

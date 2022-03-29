@@ -21,7 +21,7 @@ class Autimation_option:
 
 class Connect_database:
     def _fetch_db(self):
-        fetch_db = mysql.connector.connect(host="10.0.0.243",user="admin",password="1qaz2wsx",database="automation")
+        fetch_db = mysql.connector.connect(host="172.18.0.2",user="root",password="benz4466",database="automation")
         db_python = fetch_db.cursor()
         db_python.execute(f"select * from check_again_finish where status='000';")
         id_list = []
@@ -38,7 +38,7 @@ class Connect_database:
         return id_list,ip_list,status_list
     
     def _update_db(self,_get_id):
-        update_db = mysql.connector.connect(host="10.0.0.243",user="admin",password="1qaz2wsx",database="automation")
+        update_db = mysql.connector.connect(host="172.18.0.2",user="root",password="benz4466",database="automation")
         update_tables = update_db.cursor()
         update_tables.execute(f"UPDATE check_again_finish set status = '001' WHERE id = '{_get_id}';")
         update_db.commit()

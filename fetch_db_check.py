@@ -20,7 +20,7 @@ token = 'xoQZ0Qaq5e0lf4eFraNNs7bOVwOioE9YyNNq8zqBLjw' #<-- Token line
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
 async def check_db():  #<<<เอามาแค่ IP
-    fetch_db = mysql.connector.connect(host="10.0.0.243",user="admin",password="1qaz2wsx",database="automation")
+    fetch_db = mysql.connector.connect(host="172.18.0.2",user="root",password="benz4466",database="automation")
     db_python = fetch_db.cursor()
     db_python.execute(f"select * from frist_check where status='000';")
     id_list = []
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     main_index_0 = main_return[0]   #<<< Result
     main_index_1 = main_return[1]   #<<< ID
     main_index_2 = main_return[2]   #<<< IP
-    db_automation = mysql.connector.connect(host="10.0.0.243",user="admin",password="1qaz2wsx",database="automation")
+    db_automation = mysql.connector.connect(host="172.18.0.2",user="root",password="benz4466",database="automation")
     update_tables = db_automation.cursor()
 ##########################################################################################################################
     for result_from_ros,result_id,result_ip in zip(main_index_0 , main_index_1 , main_index_2):
