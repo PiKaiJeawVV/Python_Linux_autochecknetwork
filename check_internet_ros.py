@@ -6,7 +6,7 @@ import random
 import subprocess
 import re
 
-with open("//root//ip_host_ros//ip_all_isp.txt",) as ip_ros:
+with open("//root//host_ros//ip_all_isp.txt",) as ip_ros:
     ip_list = ip_ros.read().splitlines()
 
 url = 'https://notify-api.line.me/api/notify'
