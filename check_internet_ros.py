@@ -88,13 +88,15 @@ if __name__ == '__main__':
             try:
                 main(data_ip)
             except:
+                msg = f'Fail to Run Program\n' + time_stamp
+                requests.post(url, headers=headers, data = {'message':msg})
                 pass
     else:
         pass
     t2 = time.time() - t1
     db_frist_check.close()
-    if time_hour_int >= 10 and time_hour_int <= 20: 
-        msg = 'Check already\n' + f'Run Program {t2:0.2f} Sec.'
-        requests.post(url, headers=headers, data = {'message':msg})
-    else:
-        pass
+    #if time_hour_int >= 10 and time_hour_int <= 20:
+    #    msg = 'Check already\n' + f'Run Program {t2:0.2f} Sec.'
+    #    requests.post(url, headers=headers, data = {'message':msg})
+    #else:
+    #    pass
