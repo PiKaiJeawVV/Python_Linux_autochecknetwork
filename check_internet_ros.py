@@ -13,7 +13,7 @@ url = 'https://notify-api.line.me/api/notify'
 token = 'xoQZ0Qaq5e0lf4eFraNNs7bOVwOioE9YyNNq8zqBLjw' #<-- Token line
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
-ping = ['google.com','facebook.com','203.28.128.1','203.28.128.2']
+ping = ['www.google.com','8.8.8.8','8.8.4.4']
 
 db_frist_check = mysql.connector.connect(host="172.18.0.2",user="root",password="benz4466",database="automation")
 insert_3 = db_frist_check.cursor()
